@@ -12,13 +12,16 @@ import { CommonModule } from '@angular/common';
 export class ShoppingList {
   item: string = '';
   listOfItems: ListItem[] = [];
+  private nextId: number = 0;
 
   addItem() {
-    if(!this.item) {
-      return;
-    }
+    const normalizedInput = this.item.trim().toLocaleLowerCase();
+
+    if(!this.item) return;
+    if(this.listOfItems.some((i) => i.name?.trim().toLocaleLowerCase() === normalizedInput)) return;
+
     const newItem = new ListItem();
-    newItem.id = this.listOfItems.length + 1;
+    newItem.id = this.nextId++; // unique id
     newItem.name = this.item
     this.listOfItems.push(newItem);
     this.item = "";
@@ -30,5 +33,9 @@ export class ShoppingList {
 
   removeItem(item: ListItem) {
     this.listOfItems = this.listOfItems.filter((i) => i.id != item.id)
+  }
+
+  clearList() {
+    this.listOfItems = [];    
   }
 }
