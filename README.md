@@ -1,59 +1,23 @@
-# ListaDeCompras
+# 🛒 Shopping List
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+This is my very first Angular project!  
+In this app, I put into practice some basic Angular concepts that are great for beginners like me.
 
-## Development server
+## 🚀 Live Demo
 
-To start a local development server, run:
+Check out the app running live here:  
+[https://shopping-list-nine-psi.vercel.app](https://shopping-list-nine-psi.vercel.app)
 
-```bash
-ng serve
-```
+## 📚 What you’ll find here
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **🧱 Components:** The app is built as a reusable component (`ShoppingList`) — a fundamental Angular building block.
+- **🔄 Two-way data binding:** The input field uses `[(ngModel)]` to sync the user input with the component’s data.
+- **🎯 Event handling:** Buttons and form submit trigger methods like adding, removing, or clearing items.
+- **📌 Directives:** Uses structural directives like `*ngFor` to loop through the list and display items, and `*ngIf` to conditionally show parts of the UI.
+- **🎨 Property binding:** Applies CSS classes dynamically based on item state (`[ngClass]`).
+- **🗂️ Services and Models:** Separates data logic with a simple `ListItem` model class.
+- **📝 Forms:** Uses Angular forms with `ngForm` to manage input validation and submission.
 
-## Code scaffolding
+## 🔧 What it does
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+You can add items to your shopping list, check them off, remove individual items, or clear the whole list. It’s a simple but solid start for anyone learning Angular.
