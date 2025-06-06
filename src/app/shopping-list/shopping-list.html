@@ -1,1 +1,42 @@
-<p>shopping-list works!</p>
+<div id="container">
+    <h1>Lista de Compras</h1>
+    
+    <form id="form">
+        <input name="itemDigitado" type="text" id="item" placeholder="Digite o nome do item">
+        <button type="submit">Adicionar</button>
+        <button type="button">Limpar Lista</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="small">#</th>
+                <th>Itens</th>
+                <th class="small"></th>
+                <th class="small"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Arroz</td>
+                <td><input type="checkbox"></td>
+                <td>
+                    <button id="trash-button" aria-label="remove item">
+                        <img src="trash.png" alt="Ícone" />
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Maçã</td>
+                <td><input type="checkbox"></td>
+                <td>
+                    <button id="trash-button" aria-label="remove item">
+                        <img src="trash.png" alt="Ícone" />
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

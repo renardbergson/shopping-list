@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.97;
+}
+
+$primary-dark: #0056b3;
+$primary-light: #007bff;
+
+@mixin button-base($background-color, $hover-color) {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: $background-color;
+    color: #fff;
+    font-size: 14pt;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+#container {
+    border: 1px solid #cccccc57;
+    box-shadow: 5px 5px 10px #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    h1 {
+        margin-bottom: 30px;
+        letter-spacing: 0.5px;
+        cursor: default;
+    }
+
+    #form {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid $primary-light;
+            border-radius: 6px;
+            font-size: 14pt;
+
+            &:focus {
+                outline: none;
+                border-color: $primary-dark;
+            }
+        }
+
+        button[type="submit"] {
+            @include button-base($primary-light, $primary-dark);
+        }
+
+        button[type="button"] {
+            @include button-base(red, rgb(185, 0, 0));
+        }
+    }
+
+    table {
+        // border: 1px solid black;
+        width: 100%;
+        border-collapse: collapse;
+        cursor: default;
+
+        th {
+            background-color: $primary-light;
+            color: #fff;
+        }
+
+        td.done {
+            text-decoration: line-through;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+
+            &.small {
+                width: 70px;
+            }
+        }
+
+        tr {
+            &:nth-child(odd) { // ímpares
+                background-color: #f9f9f9;
+            }
+
+            &:nth-child(even) { // pares
+                background-color: #e6f0ff;
+            }
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        #trash-button {
+            cursor: pointer;
+
+            & img {
+                width: 12px;
+            }
+        }
+    }
+}
