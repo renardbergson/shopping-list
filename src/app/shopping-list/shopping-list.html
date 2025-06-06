@@ -32,8 +32,9 @@
             @for(item of listOfItems; track item.id) {
                 <tr>
                     <td>{{ item.id }}</td>
-                    <td>{{ item.name }}</td>
-                    <td><input type="checkbox"></td>
+                    <td [ngClass]="{ 'checked' : item.checked}">{{ item.name }}</td>
+                    <td>
+                        <input type="checkbox" (click)="checkItem(item)"></td>
                     <td>
                         <button id="trash-button" aria-label="remove item">
                             <img src="trash.png" alt="Ícone" />
