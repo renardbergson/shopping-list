@@ -29,14 +29,14 @@
             }
         </thead>
         <tbody>
-            @for(item of listOfItems; track item.id) {
+            @for(item of listOfItems; track item.id; let i = $index) {
                 <tr>
-                    <td>{{ item.id }}</td>
+                    <td>{{ i + 1 }}</td>
                     <td [ngClass]="{ 'checked' : item.checked}">{{ item.name }}</td>
                     <td>
                         <input type="checkbox" (click)="checkItem(item)"></td>
                     <td>
-                        <button id="trash-button" aria-label="remove item">
+                        <button id="trash-button" aria-label="remove item" (click)="removeItem(item)">
                             <img src="trash.png" alt="Ícone" />
                         </button>
                     </td>

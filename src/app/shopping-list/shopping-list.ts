@@ -27,4 +27,8 @@ export class ShoppingList {
   checkItem(item: ListItem) {
     item.checked = !item.checked;
   }
+
+  removeItem(item: ListItem) {
+    this.listOfItems = this.listOfItems.filter((i) => i.id != item.id)
+  }
 }
