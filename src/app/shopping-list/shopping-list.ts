@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListItem } from './listItem';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'shopping-list',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule, MatButtonModule, MatCheckbox, MatIconModule],
   templateUrl: './shopping-list.html',
   styleUrl: './shopping-list.scss'
 })

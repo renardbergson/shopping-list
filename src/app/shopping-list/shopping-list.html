@@ -9,8 +9,8 @@
             placeholder="Digite o nome do item" 
             [(ngModel)]="item"
         >
-        <button type="submit">Adicionar</button>
-        <button type="button" (click)="clearList()">Limpar Lista</button>
+        <button matButton="filled" type="submit">Adicionar</button>
+        <button matButton="filled" type="button" (click)="clearList()">Limpar Lista</button>
     </form>
 
     <table>
@@ -34,10 +34,10 @@
                     <td>{{ i + 1 }}</td>
                     <td [ngClass]="{ 'checked' : item.checked}">{{ item.name }}</td>
                     <td>
-                        <input type="checkbox" (click)="checkItem(item)"></td>
+                        <mat-checkbox (click)="checkItem(item)"></mat-checkbox>
                     <td>
                         <button id="trash-button" aria-label="remove item" (click)="removeItem(item)">
-                            <img src="trash.png" alt="Ícone" />
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
                         </button>
                     </td>
                 </tr>
